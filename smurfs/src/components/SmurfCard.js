@@ -1,12 +1,12 @@
-import React from 'react'
-import { connect } from 'react-redux'
-import { deleteSmurf } from '../actions/smurfs'
+import React from "react";
+import { connect } from "react-redux";
+import { deleteSmurf } from "../actions/smurfs";
 
 const SmurfCard = ({ id, name, age, height, dispatch }) => {
-  const smurfToDelete = { id, name, age, height }
+  const smurfToDelete = { id, name, age, height };
   const handleClick = () => {
-    dispatch(deleteSmurf(smurfToDelete))
-  }
+    dispatch(deleteSmurf(smurfToDelete));
+  };
   return (
     <div>
       <p>Name: {name}</p>
@@ -14,10 +14,10 @@ const SmurfCard = ({ id, name, age, height, dispatch }) => {
       <p>Height: {height}</p>
       <button onClick={handleClick}>Delete</button>
     </div>
-  )
-}
+  );
+};
 
 export default connect(
   null,
   null
-)(SmurfCard)
+)(SmurfCard);
