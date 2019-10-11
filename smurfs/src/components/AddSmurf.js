@@ -20,18 +20,21 @@ const AddSmurf = props => {
           name='name'
           type='text'
           value={smurf.name}
+          placeholder='name'
         />
         <input
           onChange={handleChange}
           name='age'
           type='number'
           value={smurf.age}
+          placeholder='age'
         />
         <input
           onChange={handleChange}
           name='height'
           type='number'
           value={smurf.height}
+          placeholder='height'
         />
         <button>Add smurf</button>
       </form>

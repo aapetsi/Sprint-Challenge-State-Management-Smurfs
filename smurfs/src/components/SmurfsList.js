@@ -1,4 +1,5 @@
 import React from 'react'
+import SmurfCard from './SmurfCard'
 import { connect } from 'react-redux'
 
 const SmurfsList = props => {
@@ -7,9 +8,13 @@ const SmurfsList = props => {
     <div>
       <h1>all smurfs</h1>
       {props.smurfs.map(smurf => (
-        <div key={smurf.id}>
-          <h1>{smurf.name}</h1>
-        </div>
+        <SmurfCard
+          key={smurf.id}
+          name={smurf.name}
+          id={smurf.id}
+          age={smurf.age}
+          height={smurf.height}
+        />
       ))}
     </div>
   )
