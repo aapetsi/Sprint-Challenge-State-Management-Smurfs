@@ -23,10 +23,31 @@ In this challenge, you are to build the Smurfs village once again, only this tim
 Demonstrate your understanding of this Sprint's concepts by answering the following free-form questions. Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your project manager.
 
 - [ ] What problem does the context API help solve?
+
+The context API provides a way to share props / data between components without having to explicitly pass a prop through every level of the tree.
+
 - [ ] In your own words, describe `actions`, `reducers` and the `store` and their role in Redux. What does each piece do? Why is the store known as a 'single source of truth' in a redux application?
+
+Reducers: reducers are functions that listen for specific signals / actions from the application.
+
+Actions: actions are functions that are invoked when we want to pass the the “type” or the action we want performed in the reducer.
+
+Store: the store holds the whole state tree of your application. The only way to change the state inside it is to dispatch an action on it.
+
+The redux store is known as a the 'single source of truth' because apps have one single place to get data from
+
 - [ ] What is the difference between Application state and Component state? When would be a good time to use one over the other?
+
+With application state, the data in state is available to the whole application and component state has data only available to a single component. A good case for using component state is handling changes in forms.
+A good case for using application state is: when we are applying a custom theme to the whole application.
+
 - [ ] Describe `redux-thunk`, what does it allow us to do? How does it change our `action-creators`?
+
+Redux Thunk is a middleware that provides the ability to handle asynchronous operations inside our Action Creators.
+
 - [ ] What is your favorite state management system you've learned and this sprint? Please explain why!
+
+I prefer redux for state management. Setting up redux with react is pretty simple and also the redux-devtools make app development with redux very cool.
 
 ## Project Set Up
 
